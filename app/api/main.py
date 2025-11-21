@@ -1,5 +1,6 @@
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.responses import RedirectResponse
 
 from app.models.processo import ProcessoInput
 from app.models.decision import DecisionOutput
@@ -17,6 +18,12 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
+
+@app.get("/")
+def root() -> RedirectResponse:
+    """Redirect base URL to the interactive docs."""
+    return RedirectResponse(url="/docs")
 
 
 @app.get("/health")
