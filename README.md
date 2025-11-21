@@ -15,7 +15,13 @@ retorna uma decisão estruturada:
 - `incomplete`
 
 sempre com justificativa e citações às políticas utilizadas.
+## Projeto pós deploy
 
+
+- **Base URL:** `https://process-verifier.onrender.com`
+- **Saude check:** `GET /health`
+- **OpenAPI docs:** `GET /docs`
+- **Endpoint:** `POST /v1/process/verify`
 ## Arquitetura (resumo)
 
 ```text
