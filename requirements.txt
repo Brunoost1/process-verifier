@@ -1,0 +1,9 @@
+fastapi
+uvicorn[standard]
+pydantic>=2.0
+openai>=1.0.0
+streamlit
+python-dotenv
+langsmith
+pytest
+pydantic-settings
